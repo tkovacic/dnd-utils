@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light" ng-controller="mainCtrl">
+  <a class="navbar-brand" href="/"><img style="width: 38px;" src="https://d30y9cdsu7xlg0.cloudfront.net/png/763027-200.png">
+  DnD</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown" ng-show="auth" uib-dropdown dropdown-append-to-body>
+        <div class="btn-group">
+		  <button id="btn-append-to-body" type="button" class="btn btn-outline-dark" uib-dropdown-toggle>
+			  Utilities <span class="caret"></span>
+		  </button>
+		  <div class="dropdown-menu" role="menu" aria-labelledby="btn-append-to-body" uib-dropdown-menu>
+            <a class="dropdown-item" href="/#!/lsu" ng-show="dm"><i class="fas fa-hand-holding-usd"></i> Loot Split Util</a>
+			<a class="dropdown-item" href="/#!/toudm" ng-show="dm"><i class="fas fa-dice"></i> Turn Order Util</a>
+            <a class="dropdown-item" href="/#!/tou" ng-hide="dm"><i class="fas fa-dice"></i> Turn Order Util</a>
+            <a class="dropdown-item" href="/#!/tsu" ng-hide="dm"><i class="fas fa-balance-scale"></i> Trade Shop Util</a>
+            <hr>
+            <a class="dropdown-item" href="/#!/ciu"><i class="fas fa-search"></i> Compendium Index Util</a>
+          </div>
+		</div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" ng-show="auth">
+		<a class="navbar-brand" href="#">
+			<i ng-hide="dm" class="fas fa-user"></i>
+			<i ng-show="dm" class="fas fa-user-secret"></i>
+			{{username}}
+		</a>
+		<button id="btn-append-to-body" type="button" class="btn btn-outline-danger" ng-click="smokeCookie()">
+			  <i class="fas fa-joint""></i> Smoke your cookie
+		  </button>
+	</form>
+  </div>
+</nav>

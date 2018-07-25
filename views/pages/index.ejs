@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include ../partials/header.ejs %>
+	</head>
+	<body ng-app="DNDUTILS" id="popupContainer">
+		<% include ../partials/nav.ejs %>
+		<div ng-view></div>
+		<% include ../../scripts/controllers/main.js %>
+		<% include ../../scripts/controllers/routes.js %>
+		<% include ../../scripts/controllers/login.js %>
+		<% include ../../scripts/controllers/lsu.js %>
+		<% include ../../scripts/controllers/tou.js %>
+		<% include ../../scripts/controllers/tsu.js %>
+		<% include ../../scripts/controllers/ciu.js %>
+		<script src="/libs/angular-local-storage.min.js"></script>
+		<script src="/scripts/socket.io.js"></script>
+		<script src="/libs/socket.min.js"></script>
+		<% include ../partials/footer.ejs %>
+	</body>
+</html>

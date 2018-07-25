@@ -1,0 +1,26 @@
+<div class="jumbotron text-center">
+  <div class="container">
+	<a href="/" class="lang-logo">
+		<img src="https://vignette.wikia.nocookie.net/dnd-khorvaire/images/5/5e/Dungeons-and-dragons-ios-1377019912.png/revision/latest?cb=20150114181355">
+		<!--<img src="/lang-logo.png">-->
+	</a>
+	<h1><i class="fas fa-key"></i> Authentication Token</h1>
+	<div class="form-group" ng-controller="loginCtrl">
+		<div class="input-group mb-3" style="width: 480px; margin: 0 auto; float: none;">
+			<div class="input-group-prepend">
+				<span class="input-group-text">Nickname</span>
+			</div>
+			<input type="text" class="form-control" id="nn" name="nn" ng-model="nn" placeholder="Enter Whatever Name You Want">
+		</div>
+		<div class="input-group mb-3" style="width: 480px; margin: 0 auto; float: none;">
+			<div class="input-group-prepend">
+				<span class="input-group-text">Passphrase</span>
+			</div>
+			<input type="text" class="form-control" id="pp" name="pp" ng-model="pp" placeholder="Enter Secret Passphrase">
+			<div class="input-group-append">
+				<button type="button" class="btn btn-dark" ng-click="submitPassphrase(pp,nn)"><i class="fas fa-cog"></i> Generate Cookie</button>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>

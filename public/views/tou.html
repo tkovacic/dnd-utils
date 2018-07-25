@@ -1,0 +1,30 @@
+<div class="jumbotron text-center">
+  <div class="container">
+	<h1><i class="fas fa-dice"></i> Turn Order Utility</h1>
+	<p>Before conflict, automate the construction of initiative using participents stats and rolls.</p>
+  </div>
+</div>
+<div class="jumbotron text-center" style="color: #f8f9fa; background-color: #f8f9fa;">
+	<div class="container" style="width: 200px;">
+		<div class="input-group input-group-sm mb-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text" name="dexSpan" id="dexSpan">Dex Stat</span>
+			</div>
+			<input type="number" class="form-control" name="dexStat" id="dexStat" ng-model="dexStat" aria-label="dexSpan" aria-describedby="dexSpan">
+		</div>
+		<div class="input-group input-group-sm mb-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text" name="initiativeSpan" id="initiativeSpan">Dex Mod</span>
+			</div>
+			<input type="number" class="form-control" name="dexMod" id="dexMod" ng-model="dexMod" aria-label="dexSpan" aria-describedby="initiativeSpan">
+		</div>
+		<div class="input-group input-group-sm mb-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text" name="rollSpan" id="rollSpan">D20 Roll</span>
+			</div>
+			<input type="number" class="form-control" name="roll" id="roll" ng-model="roll" aria-label="rollSpan" aria-describedby="rollSpan">
+		</div>
+	</div>
+	<hr>
+	<button type="button" class="btn btn-outline-dark" ng-click="submitInitiative(dexStat, dexMod, roll)"><i class="fas fa-cog"></i> Submit Initiative</button>
+</div>

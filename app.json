@@ -1,0 +1,8 @@
+{
+  "name": "DnD Util",
+  "description": "DnD Utility App Using Angular JS, Socket.io, and Express 4",
+  "repository": "https://github.com/heroku/node-js-getting-started",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["angular", "node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}

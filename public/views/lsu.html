@@ -1,0 +1,61 @@
+<div class="jumbotron text-center">
+  <div class="container">
+	<h1><i class="fas fa-hand-holding-usd"></i> Loot Split Utility</h1>
+	<p>Post conflict, automate the distribution of money, loot, and experience.</p>
+  </div>
+</div>
+<div class="jumbotron text-center" style="background-color: #f8f9fa" ng-controller="lsuCtrl">
+	<div class="container" style="width: 680px;">
+		<div class="row" style="margin-left: 0px;">
+			<div class="col-sm">
+				<div class="input-group input-group-sm mb-3" style="width: 300px;">
+					<div class="input-group-prepend">
+						<span class="input-group-text" name="gpSpan" id="gpSpan">Total Gold Pieces</span>
+					</div>
+					<input type="number" class="form-control" name="gp" id="gp" ng-model="gp" ng-change="convertCoins()" aria-label="gpSpan" aria-describedby="gpSpan">
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="input-group input-group-sm mb-3" style="width: 300px;">
+					<div class="input-group-prepend">
+						<span class="input-group-text" name="expSpan" id="expSpan">Total Experience</span>
+					</div>
+					<input type="number" class="form-control" name="exp" id="exp" ng-model="exp" aria-label="expSpan" aria-describedby="expSpan">
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-left: 0px;">
+			<div class="col-sm">
+				<div class="input-group input-group-sm mb-3" style="width: 300px;">
+					<div class="input-group-prepend">
+						<span class="input-group-text" name="spSpan" id="spSpan">Total Silver Pieces</span>
+					</div>
+					<input type="number" class="form-control" name="sp" id="sp" ng-model="sp" ng-change="convertCoins()" aria-label="spSpan" aria-describedby="spSpan">
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="input-group input-group-sm mb-3" style="width: 300px;">
+					<div class="input-group-prepend">
+						<span class="input-group-text" name="pCountSpan" id="pCountSpan">Participant Count</span>
+					</div>
+					<input type="number" class="form-control" name="pCount" id="pCount" ng-model="pCount" ng-change="convertCoins()" aria-label="pCountSpan" aria-describedby="pCountSpan">
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-left: 0px;">
+			<div class="col-sm">
+				<div class="input-group input-group-sm mb-3" style="width: 300px;">
+					<div class="input-group-prepend">
+						<span class="input-group-text" name="cpSpan" id="cpSpan">Total Copper Pieces</span>
+					</div>
+					<input type="number" class="form-control" name="cp" id="cp" ng-model="cp" ng-change="convertCoins()" aria-label="cpSpan" aria-describedby="cpSpan">
+				</div>
+			</div>
+			<div class="col-sm" sytle="text-align: left;">
+				<button type="submit" style="width: 300px;" class="btn btn-dark" ng-click="clearInterface()">Clear</button>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<p style="color: black;">Each participant needs to add {{g}} GP, {{s}} SP, {{c}} CP and {{floor(exp/pCount)}} EXP</p>
+</div>
